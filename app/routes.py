@@ -26,11 +26,11 @@ from werkzeug.urls import url_parse
 def index():
 
     # these are the posts that are going to be displayed on the
-    # index page. there are only two right now and I pretty much
-    # just copied them from the tutorial (with one small exception)
+    # index page. there are only two right now and I copied them
+    # from the tutorial (for the most part)
     posts = [
         {
-            'author': {'username' : 'DeMarcus'},
+            'author': {'username' : 'Damian'},
             'body': 'Beautiful day in Portland!'
         },
         {
