@@ -9,10 +9,19 @@ from app.models import User, Post
 # registers and understands this function and registers
 # the three items in the return statement.
 
+# to enter the flask shell, navigate to the microblog
+# top level directory and enter this command into
+# the terminal:
+#
+#           flask shell
+#
+# ... it's that simple. you can create new users, edit
+# user info, etc from the flask shell
+
 # NOTE: in order to make this work, you have to set
 # FLASK_APP=microblog.py. However, I have a .flaskenv
 # in the top level of the microblog directory, and I think
-# it handles that automatically so you don't need to
+# it's handling that automatically so you don't need to
 # worry about it.
 @app.shell_context_processor
 def make_shell_context():

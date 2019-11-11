@@ -30,7 +30,7 @@ def index():
     # from the tutorial (for the most part)
     posts = [
         {
-            'author': {'username' : 'Damian'},
+            'author': {'username' : 'John'},
             'body': 'Beautiful day in Portland!'
         },
         {

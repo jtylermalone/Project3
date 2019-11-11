@@ -4,11 +4,12 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
 # this file defines the tables in the database.
+
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
 
-# UserMixin includes "generic implementations" (methods) that are relevant
+# UserMixin includes "generic implementations" (methods?) that are relevant
 # to most models. By including UserMixin as an argument in the
 # User class, you can use all of the UserMixin methods on items
 # in the table
@@ -27,8 +28,8 @@ class User(UserMixin, db.Model):
     # The backref='author' statement creates a reference for each post
     # that will provide the author of that post. For example, to get
     # the author of a post, you would just use post.author. I don't know
-    # what the lazy='dynamic' part means, I just followed the tutorial for
-    # that.
+    # what the lazy='dynamic' part means, I just copied that from the
+    # tutorial
     posts = db.relationship('Post', backref='author', lazy='dynamic')
 
     # the __repr__ method determines how a user instance is printed
