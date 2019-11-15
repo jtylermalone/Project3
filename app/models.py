@@ -1,10 +1,28 @@
+# Tyler Malone
+# Project 3
+# CSCI315
+# 11/20/19
+
+# This application was created by following the tutorial found
+# at this url:
+#
+#      https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates
+#
+# This is a microblog, and as it is now it only consists of a login functionality
+# and two "posts" to the blog. Users who are not members of the site can create a
+# username and password. User's usernames, passwords, and email addresses are stored in
+# a database. I think that's about all there is to this website.
+
 from datetime import datetime
 from app import db, login
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
+###############################################
+#
 # this file defines the tables in the database.
-
+#
+###############################################
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
